@@ -9,57 +9,38 @@ laskuvast = 0
 
 
 def checkIfNumber(minNum, maxNum, kieli):
-    test = 0
-    x = 0
-    inputted = 0
-    while x == 0:
+    while True:
         inputted = input()
         match kieli:
             case "def":
-                try:    # check if inputted symbol is a number, if not ask again
+                try:
                     test = int(inputted)
-                    x = 1
-                    #print("x:", x, "vastnum:", vastnum)
-
-                    if test < minNum and test > maxNum:
-                        raise
-
-                    return test
-
-                except:
-                    x = 0
-                    #print("x", x)
-                    print("Only giva a asked number! / Anna vain kysytty numero!")
+                    if minNum <= test <= maxNum:
+                        return test
+                    else:
+                        print("Anna luku alueelta / Give a number in the range of", minNum, "-", maxNum)
+                except ValueError:
+                    print("Anna vain numeromerkkejä! / Only give numbers!")
 
             case "fin":
-                try:    # check if inputted symbol is a number, if not ask again
+                try:
                     test = int(inputted)
-                    x = 1
-                    #print("x:", x, "vastnum:", vastnum)
-
-                    if test < minNum and test > maxNum:
-                        raise
-                    return test
-
-                except:
-                    x = 0
-                    #print("x", x)
-                    print("Anna vain kysytty numero!")
+                    if minNum <= test <= maxNum:
+                        return test
+                    else:
+                        print("Anna luku alueelta", minNum, "-", maxNum)
+                except ValueError:
+                    print("Anna vain numeromerkkejä!")
             
             case "eng":
-                try:    # check if inputted symbol is a number, if not ask again
+                try:
                     test = int(inputted)
-                    x = 1
-                    #print("x:", x, "vastnum:", vastnum)
-
-                    if test < minNum and test > maxNum:
-                        raise
-                    return test
-
-                except:
-                    x = 0
-                    #print("x", x)
-                    print("Anna vain kysytty numero!")
+                    if minNum <= test <= maxNum:
+                        return test
+                    else:
+                        print("Give a number in the range of", minNum, "-", maxNum)
+                except ValueError:
+                    print("Only give numbers!")
 
 
 print("+-------------------------+")
