@@ -1,4 +1,5 @@
 import os
+from pythonKonsoliLaskinOliot import *
 
 vast = 0
 x = 0
@@ -6,41 +7,6 @@ vastnum = 3
 kieli = 0
 vastkieli = 0
 laskuvast = 0
-
-
-def checkIfNumber(minNum, maxNum, kieli):
-    while True:
-        inputted = input()
-        match kieli:
-            case "def":
-                try:
-                    test = int(inputted)
-                    if minNum <= test <= maxNum:
-                        return test
-                    else:
-                        print("Anna luku alueelta / Give a number in the range of", minNum, "-", maxNum)
-                except ValueError:
-                    print("Anna vain numeromerkkejä! / Only give numbers!")
-
-            case "fin":
-                try:
-                    test = int(inputted)
-                    if minNum <= test <= maxNum:
-                        return test
-                    else:
-                        print("Anna luku alueelta", minNum, "-", maxNum)
-                except ValueError:
-                    print("Anna vain numeromerkkejä!")
-            
-            case "eng":
-                try:
-                    test = int(inputted)
-                    if minNum <= test <= maxNum:
-                        return test
-                    else:
-                        print("Give a number in the range of", minNum, "-", maxNum)
-                except ValueError:
-                    print("Only give numbers!")
 
 
 print("+-------------------------+")
