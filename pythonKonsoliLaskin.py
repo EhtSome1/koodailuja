@@ -54,4 +54,4 @@ if kieli == 1:
 
         match laskuvast:
             case 1:
-                print()
+                PlusL()
