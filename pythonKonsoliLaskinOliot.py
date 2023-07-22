@@ -2,7 +2,7 @@ import os
 
 
 
-def checkIfNumber(minNum, maxNum, kieli):
+def checkIfNumberRange(minNum, maxNum, kieli):
     while True:
         inputted = input()
         match kieli:
@@ -36,7 +36,7 @@ def checkIfNumber(minNum, maxNum, kieli):
                 except ValueError:
                     print("Only give numbers!")
 
-def checkIfNumber( kieli):
+def checkIfNumber(kieli):
     while True:
         inputted = input()
         match kieli:
@@ -66,3 +66,20 @@ def PlusL():
             numberlist.append(vast)
         if vast == 0:
             print("Tulos:", sum(numberlist))
+
+def MinL():
+    os.system('cls')
+    numberlist = []
+    vast = 1
+    fvast = 1
+    print('Anna numero joka vähennetään tai kirjoita "0" jtta lasketaan kaikki (numero)')
+    fvast = checkIfNumber("fin")
+    while vast != 0:
+        vast = checkIfNumber("fin")
+
+        if vast != 0:
+            numberlist.append(vast)
+        if vast == 0:
+            for x in numberlist:
+                fvast = fvast - x
+            print("Tulos:", fvast)
