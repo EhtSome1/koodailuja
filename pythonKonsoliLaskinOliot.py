@@ -65,6 +65,8 @@ def checkIfNumberOrWord(word, kieli):
                 except ValueError:
                     if inputted != word:
                         print('Anna vain numeromerkkejä tai"', word +'!')
+                    if inputted == word:
+                        return word
             
             case "eng":
                 try:
