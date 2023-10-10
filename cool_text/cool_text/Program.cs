@@ -1,4 +1,8 @@
-﻿namespace program
+using System;
+using System.Linq;
+using System,Threading;
+
+namespace program
 {
     class Program
     {
