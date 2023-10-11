@@ -8,7 +8,7 @@ namespace program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Give a word (english and only letters and numbers)");
+            Console.WriteLine("Give a word (english)");
             
             readline:
             string? word = Console.ReadLine();
